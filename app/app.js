@@ -52,10 +52,10 @@ function leerCsv(ruta) {
     let worstState = getKeyByValue(stateDeathRates, worstRate);
     console.log("1) ", maxState);
     console.log("2) ", minState);
-    console.log("3) ", worstState, `${(0, exports.roundToFixed)(worstRate * 100, 3)}%`);
-    console.log("Death rates by state");
+    console.log("3) Death rates by state");
     for (const stateEntry of Object.entries(stateDeathRates)) {
         console.log(stateEntry[0], `${(0, exports.roundToFixed)(Number(stateEntry[1]) * 100, 3)}%`);
     }
+    console.log("4) ", worstState, `${(0, exports.roundToFixed)(worstRate * 100, 3)}%`);
 }
 leerCsv("./app/time_series_covid19_deaths_US.csv");
